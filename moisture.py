@@ -44,7 +44,7 @@ Panic over! Plant has water again :)
 def sendEmail(smtp_message):
 	try:
 		smtpObj = smtplib.SMTP(smtp_host, smtp_port)
-		smtpObj.login(smtp_username, smtp_password)
+		smtpObj.login(smtp_username, smtp_password) # If you don't need to login to your smtp provider, simply remove this line
 		smtpObj.sendmail(smtp_sender, smtp_receivers, smtp_message)         
 		print "Successfully sent email"
 	except SMTPException:
