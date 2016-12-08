@@ -47,7 +47,7 @@ def sendEmail(smtp_message):
 		smtpObj.login(smtp_username, smtp_password) # If you don't need to login to your smtp provider, simply remove this line
 		smtpObj.sendmail(smtp_sender, smtp_receivers, smtp_message)         
 		print "Successfully sent email"
-	except SMTPException:
+	except smtplib.SMTPException:
 		print "Error: unable to send email"
 
 # This is our callback function, this function will be called every time there is a change on the specified GPIO channel, in this example we are using 17
